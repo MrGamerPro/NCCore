@@ -11,6 +11,7 @@ use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerLoginEvent;
 use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\event\player\PlayerItemHeldEvent;
+use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\utils\TextFormat;
 
 class NCEasterEggs extends PluginBase implements Listener{
@@ -39,6 +40,16 @@ class NCEasterEggs extends PluginBase implements Listener{
       $player->sendPopup("§o§4MissingNo");
     }
     #End of SantX MissingNo Easter Egg
+  }
+  
+  public function onPlayerChat(PlayerChatEvent $event){
+    $player = $event->getPlayer()
+    $message = $event->getMessage()
+    #Avada Kedavra Easter Egg
+    if(strtolower($message) == "avada kedavra"){
+      #kill random player
+    }
+    #End of Avada Kedavra Easter Egg
   }
   
   public function onPlayerQuit(PlayerQuitEvent $event){
