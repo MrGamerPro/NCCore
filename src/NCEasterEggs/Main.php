@@ -13,6 +13,8 @@ use pocketmine\event\player\PlayerQuitEvent;
 use pocketmine\event\player\PlayerItemHeldEvent;
 use pocketmine\event\player\PlayerChatEvent;
 use pocketmine\utils\TextFormat;
+use pocketmine\Player;
+use pocketmine\Server;
 use CustomAlerts\CustomAlerts;
 use CustomAlerts\Events\CustomAlertsJoinEvent;
 use CustomAlerts\Events\CustomAlertsQuitEvent;
@@ -67,7 +69,12 @@ class NCEasterEggs extends PluginBase implements Listener{
     $message = $event->getMessage()
     # Avada Kedavra Easter Egg
     if(strtolower($message) == "avada kedavra"){
-      # kill random player
+      /** @var \pocketmine\Server $server */
+      $players = $server->getOnlinePlayers();
+      $target = $players[array_rand($players)]->getName();
+      if($target instanceof Player){
+         $target->kill();
+      }
     }
     # End of Avada Kedavra Easter Egg
   }
