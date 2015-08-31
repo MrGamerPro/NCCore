@@ -27,7 +27,7 @@ class NCEasterEggs extends PluginBase implements Listener{
   public function onPlayerJoin(PlayerJoinEvent $event){
     #SantX Lag Easter Egg
     if(strtolower($event->getPlayer()->getName()) === "santx"){
-      $event->broadcastMessage("§a".$event->getPlayer()->getName()." §o§eè laggato dentro il server")
+      $this->getServer()->broadcastMessage("§a".$event->getPlayer()->getName()." §o§eè laggato dentro il server")
     }
     #End of SantX Lag Easter Egg
   }
@@ -44,7 +44,7 @@ class NCEasterEggs extends PluginBase implements Listener{
   public function onPlayerQuit(PlayerQuitEvent $event){
     #SantX Lag Easter Egg
     if(strtolower($event->getPlayer()->getName()) === "santx"){
-      $event->broadcastMessage("§a".$event->getPlayer()->getName()." §o§cè laggato fuori dal server")
+      $this->getServer()->broadcastMessage("§a".$event->getPlayer()->getName()." §o§cè laggato fuori dal server")
     }
     #End of SantX Lag Easter Egg
   }
