@@ -77,6 +77,21 @@ class NCEasterEggs extends PluginBase implements Listener{
       }
     }
     # End of Avada Kedavra Easter Egg
+    # Tiziana Cantone Easter Egg
+    if(strtolower($message) == "stai facendo un video?"){
+      $player->sendMessage(TextFormat::GREEN."Bravoh!");
+    }
+    # End of Tiziana Cantone Easter Egg
+    # Zio Michele Easter Egg
+    if(strtolower($message) == "zio michele"){
+      $player->sendMessage(TextFormat::GREEN."Ha stato lui con lu trattoreh")
+    }
+    # End of Zio Michele Easter Egg
+    # iPhone Sh.t Easter Egg
+    if(strtolower($message) == ["iphone","ipad","ipod"]){
+      $player->sendMessage(TextFormat::YELLOW."Forse volevi dire ".TextFormat::GREEN."iMerd".TextFormat::YELLOW."?");
+    }
+    # End of iPhone Sh.t Easter Egg
   }
   
   public function onPlayerQuit(PlayerQuitEvent $event){
