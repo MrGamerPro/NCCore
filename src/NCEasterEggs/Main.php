@@ -36,9 +36,7 @@ class NCEasterEggs extends PluginBase implements Listener{
     #SantX MissingNo Easter Egg
     if(strtolower($event->getPlayer()->getName()) === "santx"){
       $player = $event->getPlayer()
-      if($item->getId() == /* qualsiasi item */){
-        $player->sendPopup("§o§4MissingNo");
-      }
+      $player->sendPopup("§o§4MissingNo");
     }
     #End of SantX MissingNo Easter Egg
   }
