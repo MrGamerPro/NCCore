@@ -42,14 +42,19 @@ class NCEasterEggs extends PluginBase implements Listener{
   public function onPlayerJoin(PlayerJoinEvent $event){
     # SantX Lag Easter Egg
     if(strtolower($event->getPlayer()->getName()) === "santx"){
-      $this->getServer()->broadcastMessage("§a".$event->getPlayer()->getName()." §o§eè laggato dentro il server")
+      $this->getServer()->broadcastMessage("§a".$event->getPlayer()->getName()."§o§e è laggato dentro il server");
     }
     # End of SantX Lag Easter Egg
+    # Indrenx46 Easter Egg
+    if(strtolower($event->getPlayer()->getName() === "indrenx46")){
+      $this->getServer()->broadcastMessage("§eIl kebabbaro §a".$event->getPlayer()->getName()."§o§e è entrato nel server")
+    }
+    # End of Indrenx46 Easter Egg
   }
   
   public function onCAJoinEvent(CustomAlertsJoinEvent $event){
     # CUSTOMALERTS JOIN WORKAROUND
-    if(strtolower($event->getPlayer()->getName()) === "santx"){
+    if(strtolower($event->getPlayer()->getName()) === ["santx","indrenx46"]){
     	$event->setCancelled(true);
     }
     # End CUSTOMALERTS JOIN WORKAROUND
@@ -58,15 +63,15 @@ class NCEasterEggs extends PluginBase implements Listener{
   public function onItemHeld(PlayerItemHeldEvent $event){
     # SantX MissingNo Easter Egg
     if(strtolower($event->getPlayer()->getName()) === "santx"){
-      $player = $event->getPlayer()
+      $player = $event->getPlayer();
       $player->sendPopup("§o§4MissingNo");
     }
     # End of SantX MissingNo Easter Egg
   }
   
   public function onPlayerChat(PlayerChatEvent $event){
-    $player = $event->getPlayer()
-    $message = $event->getMessage()
+    $player = $event->getPlayer();
+    $message = $event->getMessage();
     # Avada Kedavra Easter Egg
     if(strtolower($message) == "avada kedavra"){
       /** @var \pocketmine\Server $server */
@@ -84,7 +89,7 @@ class NCEasterEggs extends PluginBase implements Listener{
     # End of Tiziana Cantone Easter Egg
     # Zio Michele Easter Egg
     if(strtolower($message) == "zio michele"){
-      $player->sendMessage(TextFormat::GREEN."Ha stato lui con lu trattoreh")
+      $player->sendMessage(TextFormat::GREEN."Ha stato lui con lu trattoreh");
     }
     # End of Zio Michele Easter Egg
     # iPhone Sh.t Easter Egg
@@ -97,14 +102,19 @@ class NCEasterEggs extends PluginBase implements Listener{
   public function onPlayerQuit(PlayerQuitEvent $event){
     #SantX Lag Easter Egg
     if(strtolower($event->getPlayer()->getName()) === "santx"){
-      $this->getServer()->broadcastMessage("§a".$event->getPlayer()->getName()." §o§cè laggato fuori dal server")
+      $this->getServer()->broadcastMessage("§a".$event->getPlayer()->getName()." §o§cè laggato fuori dal server");
     }
     # End of SantX Lag Easter Egg
+    # Indrenx46 Easter Egg
+    if(strtolower($event->getPlayer()->getName() === "indrenx46")){
+      $this->getServer()->broadcastMessage("§eIl kebabbaro §a".$event->getPlayer()->getName()."§o§e è uscito dal server")
+    }
+    # End of Indrenx46 Easter Egg
   }
   
   public function onCAQuitEvent(CustomAlertsQuitEvent $event){
     # CUSTOMALERTS QUIT WORKAROUND
-    if(strtolower($event->getPlayer()->getName()) === "santx"){
+    if(strtolower($event->getPlayer()->getName()) === ["santx","indrenx46"]){
       $event->setCancelled(true);
     }
     # End of CUSTOMALERTS QUIT WORKAROUND
