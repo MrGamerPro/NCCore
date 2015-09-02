@@ -89,36 +89,36 @@ class NCEasterEggs extends PluginBase implements Listener{
     # End of Avada Kedavra Easter Egg
     # Tiziana Cantone Easter Egg
     if(strtolower($message) == "stai facendo un video?"){
-      $player->sendMessage(TextFormat::GREEN."Bravoh!");
+      $this->getServer()->broadcastMessage(TextFormat::GREEN."Bravoh!");
     }
     # End of Tiziana Cantone Easter Egg
     # Catone Easter Egg
     if(strtolower($message) == "porco schifo"){
-      $player->sendMessage(TextFormat::YELLOW."È uno sballo, mi piaceh!");
+      $this->getServer()->broadcastMessage(TextFormat::YELLOW."È uno sballo, mi piaceh!");
     }
     # End of Catone Easter Egg
     # Giuseppe Simone Easter Eggs
     if(strtolower($message) == ["monella","monellah","sei una monella","sei una monellah"]){
-      $player->sendMessage(TextFormat::YELLOW."Monellah! Monellah! Sei una monellah!");
+      $this->getServer()->broadcastMessage(TextFormat::YELLOW."Monellah! Monellah! Sei una monellah!");
     }
     if(strtolower($message) == "azzorra"){
-      $player->sendMessage(TextFormat::YELLOW."Azzorra mi ha fatto incazzare!");
+      $this->getServer()->broadcastMessage(TextFormat::YELLOW."Azzorra mi ha fatto incazzare!");
     }
     if(strtolower($message) == "vagina"){
-      $player->sendMessage(TextFormat::YELLOW."Neanche un chilo di vagina, avvocatoh");
+      $this->getServer()->broadcastMessage(TextFormat::YELLOW."Neanche un chilo di vagina, avvocatoh");
     }
     if(strtolower($message) == "coda di un canguro"){
-      $player->sendMessage(TextFormat::YELLOW."Mi diventa duro duro come la coda di un canguro!");
+      $this->getServer()->broadcastMessage(TextFormat::YELLOW."Mi diventa duro duro come la coda di un canguro!");
     }
     # End of Giuseppe Simone Easter Eggs
     # Zio Michele Easter Egg
     if(strtolower($message) == "zio michele"){
-      $player->sendMessage(TextFormat::GREEN."Ha stato lui con lu trattoreh");
+      $this->getServer()->broadcastMessage(TextFormat::GREEN."Ha stato lui con lu trattoreh");
     }
     # End of Zio Michele Easter Egg
     # iPhone Sh.t Easter Egg
     if(strtolower($message) == ["iphone","ipad","ipod"]){
-      $player->sendMessage(TextFormat::YELLOW."Forse volevi dire ".TextFormat::GREEN."iMerd".TextFormat::YELLOW."?");
+      $this->getServer()->broadcastMessage(TextFormat::YELLOW."Forse volevi dire ".TextFormat::GREEN."iMerd".TextFormat::YELLOW."?");
     }
     # End of iPhone Sh.t Easter Egg
     # Indrenx46 Easter Egg
@@ -133,20 +133,25 @@ class NCEasterEggs extends PluginBase implements Listener{
     # End of AnThOnEx Easter Egg
     # Adam Kadmon Easter Egg
     if(strtolower($message) == ["illuminati","kadmon","adam kadmon","coincidenze","stolti e corrotti"]){
-      $player->sendMessage(TextFormat::YELLOW."Coincidenze? Io non credo.");
+      $this->getServer()->broadcastMessage(TextFormat::YELLOW."Coincidenze? Io non credo.");
     }
     # End of Adam Kadmon Easter Egg
     # Creepy Easter Eggs
     if(strtolower($message) == ["buried","buried alive"]){
-      $player->sendMessage(TextFormat::RED."I feel so lonely.. Do you want to stay with me?");
+      $this->getServer()->broadcastMessage(TextFormat::RED."I feel so lonely.. Do you want to stay with me?");
     }
     if(strtolower($message) == ["misfortune","misfortune.gb"]){
-      $player->sendMessage(TextFormat::RED."I AM GOD HERE.");
+      $this->getServer()->broadcastMessage(TextFormat::RED."I AM GOD HERE.");
     }
     if(strtolower($message) == ["white hand","whitehand"]){
-      $player->sendMessage(TextFormat::RED."Hai una mano bianca dietro la schiena.");
+      $this->getServer()->broadcastMessage(TextFormat::RED."Hai una mano bianca dietro la schiena.");
     }
     # End of Creepy Easter Eggs
+    # Thug Easter Egg
+    if(strtolower($message) == ["thug","#thug","thug life","#thuglife","mlg","#mlg","rekt","#rekt","get rekt","#getrekt",]){
+      $this->getServer()->broadcastMessage(TextFormat::RED."GET REKT ".TextFormat::YELLOW."O MY GOD ".TextFormat::GREEN."MLGGGG ".TextFormat::RED."THUG LIFE!");
+    }
+    # End of Thug Easter Egg
   }
   
   public function onPlayerQuit(PlayerQuitEvent $event){
