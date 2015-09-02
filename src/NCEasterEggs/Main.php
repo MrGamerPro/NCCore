@@ -46,15 +46,20 @@ class NCEasterEggs extends PluginBase implements Listener{
     }
     # End of SantX Lag Easter Egg
     # Indrenx46 Easter Egg
-    if(strtolower($event->getPlayer()->getName() === "indrenx46")){
-      $this->getServer()->broadcastMessage("§eIl kebabbaro §a".$event->getPlayer()->getName()."§o§e è entrato nel server")
+    if(strtolower($event->getPlayer()->getName()) === "indrenx46"){
+      $this->getServer()->broadcastMessage("§eIl kebabbaro §a".$event->getPlayer()->getName()."§o§e è entrato nel server");
     }
     # End of Indrenx46 Easter Egg
+    # AnThOnEx Easter Egg
+    if(strtolower($event->getPlayer()->getName()) === "anthonex"){
+      $this->getServer()->broadcastMessage("§l§eIL SUPREMO §a".$event->getPlayer->getName()."§e È ENTRATO NEL SERVER.");
+    }
+    # End of AnThOnEx Easter Egg
   }
   
   public function onCAJoinEvent(CustomAlertsJoinEvent $event){
     # CUSTOMALERTS JOIN WORKAROUND
-    if(strtolower($event->getPlayer()->getName()) === ["santx","indrenx46"]){
+    if(strtolower($event->getPlayer()->getName()) === ["santx","indrenx46","anthonex"]){
     	$event->setCancelled(true);
     }
     # End CUSTOMALERTS JOIN WORKAROUND
@@ -97,6 +102,32 @@ class NCEasterEggs extends PluginBase implements Listener{
       $player->sendMessage(TextFormat::YELLOW."Forse volevi dire ".TextFormat::GREEN."iMerd".TextFormat::YELLOW."?");
     }
     # End of iPhone Sh.t Easter Egg
+    # Indrenx46 Easter Egg
+    if(strtolower($message) == ["indrenx","indrenx46"]){
+      $player->sendMessage(TextFormat::YELLOW."Non nominare il kebabbaro invano");
+    }
+    # End of Indrenx46 Easter Egg
+    # AnThOnEx Easter Egg
+      if(strtolower($message) == "anthonex"){
+      $player->sendMessage(TextFormat::YELLOW."Non nominare il Supremo invano");
+    }
+    # End of AnThOnEx Easter Egg
+    # Adam Kadmon Easter Egg
+    if(strtolower($message) == ["illuminati","kadmon","adam kadmon","coincidenze","stolti e corrotti"]){
+      $player->sendMessage(TextFormat::YELLOW."Coincidenze? Io non credo.");
+    }
+    # End of Adam Kadmon Easter Egg
+    # Creepy Easter Eggs
+    if(strtolower($message) == ["buried","buried alive"]){
+      $player->sendMessage(TextFormat::RED."I feel so lonely.. Do you want to stay with me?");
+    }
+    if(strtolower($message) == ["misfortune","misfortune.gb"]){
+      $player->sendMessage(TextFormat::RED."I AM GOD HERE.");
+    }
+    if(strtolower($message) == ["white hand","whitehand"]){
+      $player->sendMessage(TextFormat::RED."Hai una mano bianca dietro la schiena.");
+    }
+    # End of Creepy Easter Eggs
   }
   
   public function onPlayerQuit(PlayerQuitEvent $event){
@@ -106,15 +137,20 @@ class NCEasterEggs extends PluginBase implements Listener{
     }
     # End of SantX Lag Easter Egg
     # Indrenx46 Easter Egg
-    if(strtolower($event->getPlayer()->getName() === "indrenx46")){
-      $this->getServer()->broadcastMessage("§eIl kebabbaro §a".$event->getPlayer()->getName()."§o§e è uscito dal server")
+    if(strtolower($event->getPlayer()->getName()) === "indrenx46"){
+      $this->getServer()->broadcastMessage("§eIl kebabbaro §a".$event->getPlayer()->getName()."§o§e è uscito dal server");
     }
     # End of Indrenx46 Easter Egg
+    # AnThOnEx Easter Egg
+    if(strtolower($event->getPlayer()->getName()) === "anthonex"){
+      $this->getServer()->broadcastMessage("§l§cIL SUPREMO §a".$event->getPlayer->getName()."§c È USCITO DAL SERVER.");
+    }
+    # End of AnThOnEx Easter Egg
   }
   
   public function onCAQuitEvent(CustomAlertsQuitEvent $event){
     # CUSTOMALERTS QUIT WORKAROUND
-    if(strtolower($event->getPlayer()->getName()) === ["santx","indrenx46"]){
+    if(strtolower($event->getPlayer()->getName()) === ["santx","indrenx46","anthonex"]){
       $event->setCancelled(true);
     }
     # End of CUSTOMALERTS QUIT WORKAROUND
