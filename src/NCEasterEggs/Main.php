@@ -92,6 +92,25 @@ class NCEasterEggs extends PluginBase implements Listener{
       $player->sendMessage(TextFormat::GREEN."Bravoh!");
     }
     # End of Tiziana Cantone Easter Egg
+    # Catone Easter Egg
+    if(strtolower($message) == "porco schifo"){
+      $player->sendMessage(TextFormat::YELLOW."È uno sballo, mi piaceh!");
+    }
+    # End of Catone Easter Egg
+    # Giuseppe Simone Easter Eggs
+    if(strtolower($message) == ["monella","monellah","sei una monella","sei una monellah"]){
+      $player->sendMessage(TextFormat::YELLOW."Monellah! Monellah! Sei una monellah!");
+    }
+    if(strtolower($message) == "azzorra"){
+      $player->sendMessage(TextFormat::YELLOW."Azzorra mi ha fatto incazzare!");
+    }
+    if(strtolower($message) == "vagina"){
+      $player->sendMessage(TextFormat::YELLOW."Neanche un chilo di vagina, avvocatoh");
+    }
+    if(strtolower($message) == "coda di un canguro"){
+      $player->sendMessage(TextFormat::YELLOW."Mi diventa duro duro come la coda di un canguro!");
+    }
+    # End of Giuseppe Simone Easter Eggs
     # Zio Michele Easter Egg
     if(strtolower($message) == "zio michele"){
       $player->sendMessage(TextFormat::GREEN."Ha stato lui con lu trattoreh");
