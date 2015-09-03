@@ -94,7 +94,7 @@ class NCEasterEggs extends PluginBase implements Listener{
     # End of Avada Kedavra Easter Egg
     # End of Magic Easter Eggs
     # Tiziana Cantone Easter Egg
-    if(strtolower($message) == "stai facendo un video?"){
+    if(strtolower($message) == ["stai facendo un video?","sto reccando","sto registrando","sto facendo un video","sto rec"]){
       $this->getServer()->broadcastMessage(TextFormat::GREEN."Bravoh!");
     }
     # End of Tiziana Cantone Easter Egg
