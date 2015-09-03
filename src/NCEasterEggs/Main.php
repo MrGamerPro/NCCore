@@ -80,8 +80,7 @@ class Main extends PluginBase implements Listener{
     # Magic Easter Eggs
     # Avada Kedavra Easter Egg
     if(strtolower($message) === "avada kedavra" and $player->getInventory()->getItemInHand()->getID() === Item::STICK){
-      /** @var \pocketmine\Server $server */
-      $players = $server->getOnlinePlayers();
+      $players = $this->getServer()->getOnlinePlayers();
       $target = $players[array_rand($players)];
       $targetname = $target->getName();
       if($target->hasPermission("easteregg.exempt")){
@@ -94,7 +93,7 @@ class Main extends PluginBase implements Listener{
     # End of Avada Kedavra Easter Egg
     # End of Magic Easter Eggs
     # Tiziana Cantone Easter Egg
-    if(strtolower($message) === ["stai facendo un video?","sto reccando","sto registrando","sto facendo un video","sto rec"]){
+    if(in_array($message, ["stai facendo un video?","sto reccando","sto registrando","sto facendo un video","sto rec"])){
       $this->getServer()->broadcastMessage(TextFormat::GREEN."Bravoh!");
     }
     # End of Tiziana Cantone Easter Egg
@@ -104,7 +103,7 @@ class Main extends PluginBase implements Listener{
     }
     # End of Catone Easter Egg
     # Giuseppe Simone Easter Eggs
-    if(strtolower($message) === ["monella","monellah","sei una monella","sei una monellah"]){
+    if(in_array($message, ["monella","monellah","sei una monella","sei una monellah"])){
       $this->getServer()->broadcastMessage(TextFormat::YELLOW."Monellah! Monellah! Sei una monellah!");
     }
     if(strtolower($message) === "azzorra"){
@@ -123,43 +122,43 @@ class Main extends PluginBase implements Listener{
     }
     # End of Zio Michele Easter Egg
     # Mattia Sangermano Easter Egg
-    if(strtolower($message) === ["bordello","minchia zio","mattia sangermano","tia sangermano"]){
+    if(in_array($message, ["bordello","minchia zio","mattia sangermano","tia sangermano"])){
       $this->getServer()->broadcastMessage(TextFormat::YELLOW."Se non dai fuoco ad una banca, ceh, sei coglioneh!");
     }
     # End of Mattia Sangermano Easter Egg
     # iPhone Sh.t Easter Egg
-    if(strtolower($message) === ["iphone","ipad","ipod","imac"]){
+    if(in_array($message, ["iphone","ipad","ipod","imac"])){
       $this->getServer()->broadcastMessage(TextFormat::YELLOW."Forse volevi dire ".TextFormat::GREEN."iMerd".TextFormat::YELLOW."?");
     }
     # End of iPhone Sh.t Easter Egg
     # Indrenx46 Easter Egg
-    if(strtolower($message) === ["indrenx","indrenx46"]){
+    if(in_array($message, ["indrenx","indrenx46"])){
       $player->sendMessage(TextFormat::YELLOW."Non nominare il kebabbaro invano");
     }
     # End of Indrenx46 Easter Egg
     # AnThOnEx Easter Egg
-      if(strtolower($message) === "anthonex"){
+    if(strtolower($message) === "anthonex"){
       $player->sendMessage(TextFormat::YELLOW."Non nominare il Supremo invano");
     }
     # End of AnThOnEx Easter Egg
     # Adam Kadmon Easter Egg
-    if(strtolower($message) === ["illuminati","kadmon","adam kadmon","coincidenze","stolti e corrotti"]){
+    if(in_array($message, ["illuminati","kadmon","adam kadmon","coincidenze","stolti e corrotti"])){
       $this->getServer()->broadcastMessage(TextFormat::YELLOW."Coincidenze? Io non credo.");
     }
     # End of Adam Kadmon Easter Egg
     # Creepy Easter Eggs
-    if(strtolower($message) === ["buried","buried alive"]){
+    if(in_array($message, ["buried","buried alive"])){
       $this->getServer()->broadcastMessage(TextFormat::RED."I feel so lonely.. Do you want to stay with me?");
     }
-    if(strtolower($message) === ["misfortune","misfortune.gb"]){
+    if(in_array($message, ["misfortune","misfortune.gb"])){
       $this->getServer()->broadcastMessage(TextFormat::RED."I AM GOD HERE.");
     }
-    if(strtolower($message) === ["white hand","whitehand"]){
+    if(in_array($message, ["white hand","whitehand"])){
       $this->getServer()->broadcastMessage(TextFormat::RED."Hai una mano bianca dietro la schiena.");
     }
     # End of Creepy Easter Eggs
     # Thug Easter Egg
-    if(strtolower($message) === ["thug","#thug","thug life","#thuglife","mlg","#mlg","rekt","#rekt","get rekt","#getrekt",]){
+    if(in_array($message, ["thug","#thug","thug life","#thuglife","mlg","#mlg","rekt","#rekt","get rekt","#getrekt",])){
       $this->getServer()->broadcastMessage(TextFormat::RED."GET REKT ".TextFormat::YELLOW."O MY GOD ".TextFormat::GREEN."MLGGGG ".TextFormat::RED."THUG LIFE!");
     }
     # End of Thug Easter Egg
