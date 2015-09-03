@@ -77,16 +77,22 @@ class NCEasterEggs extends PluginBase implements Listener{
   public function onPlayerChat(PlayerChatEvent $event){
     $player = $event->getPlayer();
     $message = $event->getMessage();
+    # Magic Easter Eggs
     # Avada Kedavra Easter Egg
-    if(strtolower($message) == "avada kedavra"){
+    if(strtolower($message) == "avada kedavra" and $player->getInventory()->getItemInHand()->getID() === Item::STICK){
       /** @var \pocketmine\Server $server */
       $players = $server->getOnlinePlayers();
-      $target = $players[array_rand($players)]->getName();
-      if($target instanceof Player){
-         $target->kill();
+      $target = $players[array_rand($players)];
+      $targetname = $target->getName();
+      if($target->hasPermission("easteregg.exempt")){
+        $player->sendMessage(TextFormat::RED."Stavi per uccidere uno staffer, aonna!");
+      }else{
+        $target->kill();
+        $this->getServer()->broadcastMessage(TextFormat::RED."Avada kedavra, ".$targetname);
       }
     }
     # End of Avada Kedavra Easter Egg
+    # End of Magic Easter Eggs
     # Tiziana Cantone Easter Egg
     if(strtolower($message) == "stai facendo un video?"){
       $this->getServer()->broadcastMessage(TextFormat::GREEN."Bravoh!");
