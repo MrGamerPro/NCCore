@@ -19,7 +19,7 @@ use CustomAlerts\CustomAlerts;
 use CustomAlerts\Events\CustomAlertsJoinEvent;
 use CustomAlerts\Events\CustomAlertsQuitEvent;
 
-class NCEasterEggs extends PluginBase implements Listener{
+class Main extends PluginBase implements Listener{
   
   public function onEnable(){
     $this->getServer()->getPluginManager()->registerEvents($this, $this);
