@@ -60,7 +60,7 @@ class NCEasterEggs extends PluginBase implements Listener{
   public function onCAJoinEvent(CustomAlertsJoinEvent $event){
     # CUSTOMALERTS JOIN WORKAROUND
     if(strtolower($event->getPlayer()->getName()) === ["santx","indrenx46","anthonex"]){
-    	$event->setCancelled(true);
+    	CustomAlerts::getAPI()->setJoinMessage("");
     }
     # End CUSTOMALERTS JOIN WORKAROUND
   }
@@ -181,7 +181,7 @@ class NCEasterEggs extends PluginBase implements Listener{
   public function onCAQuitEvent(CustomAlertsQuitEvent $event){
     # CUSTOMALERTS QUIT WORKAROUND
     if(strtolower($event->getPlayer()->getName()) === ["santx","indrenx46","anthonex"]){
-      $event->setCancelled(true);
+      CustomAlerts::getAPI()->setQuitMessage("");
     }
     # End of CUSTOMALERTS QUIT WORKAROUND
   }
