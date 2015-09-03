@@ -100,7 +100,7 @@ class NCEasterEggs extends PluginBase implements Listener{
     # End of Tiziana Cantone Easter Egg
     # Catone Easter Egg
     if(strtolower($message) == "porco schifo"){
-      $this->getServer()->broadcastMessage(TextFormat::YELLOW."È uno sballo, mi piaceh!");
+      $this->getServer()->broadcastMessage(TextFormat::GREEN."È uno sballo, mi piaceh!");
     }
     # End of Catone Easter Egg
     # Giuseppe Simone Easter Eggs
@@ -119,11 +119,16 @@ class NCEasterEggs extends PluginBase implements Listener{
     # End of Giuseppe Simone Easter Eggs
     # Zio Michele Easter Egg
     if(strtolower($message) == "zio michele"){
-      $this->getServer()->broadcastMessage(TextFormat::GREEN."Ha stato lui con lu trattoreh");
+      $this->getServer()->broadcastMessage(TextFormat::YELLOW."Ha stato lui con lu trattoreh");
     }
     # End of Zio Michele Easter Egg
+    # Mattia Sangermano Easter Egg
+    if(strtolower($message) == ["bordello","minchia zio","mattia sangermano","tia sangermano"]){
+      $this->getServer()->broadcastMessage(TextFormat::YELLOW."Se non dai fuoco ad una banca, ceh, sei coglioneh!");
+    }
+    # End of Mattia Sangermano Easter Egg
     # iPhone Sh.t Easter Egg
-    if(strtolower($message) == ["iphone","ipad","ipod"]){
+    if(strtolower($message) == ["iphone","ipad","ipod","imac"]){
       $this->getServer()->broadcastMessage(TextFormat::YELLOW."Forse volevi dire ".TextFormat::GREEN."iMerd".TextFormat::YELLOW."?");
     }
     # End of iPhone Sh.t Easter Egg
