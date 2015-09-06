@@ -47,12 +47,12 @@ class Main extends PluginBase implements Listener{
     # End of SantX Lag Easter Egg
     # Indrenx46 Easter Egg
     if(strtolower($event->getPlayer()->getName()) === "indrenx46"){
-      $this->getServer()->broadcastMessage("§eIl kebabbaro §a".$event->getPlayer()->getName()."§o§e è entrato nel server");
+      $this->getServer()->broadcastMessage("§eIl Supremo Kebabbaro §a".$event->getPlayer()->getName()."§o§e è entrato nel server");
     }
     # End of Indrenx46 Easter Egg
     # AnThOnEx Easter Egg
     if(strtolower($event->getPlayer()->getName()) === "anthonex"){
-      $this->getServer()->broadcastMessage("§l§eIL SUPREMO §a".$event->getPlayer()->getName()."§e È ENTRATO NEL SERVER.");
+      $this->getServer()->broadcastMessage("§l§eIL DIO §a".$event->getPlayer()->getName()."§e È ENTRATO NEL SERVER.");
     }
     # End of AnThOnEx Easter Egg
   }
@@ -98,7 +98,7 @@ class Main extends PluginBase implements Listener{
     }
     # End of Tiziana Cantone Easter Egg
     # Catone Easter Egg
-    elseif(strtolower($message) === "porco schifo"){
+    elseif($message === "porco schifo"){
       $this->getServer()->broadcastMessage(TextFormat::GREEN."È uno sballo, mi piaceh!");
     }
     # End of Catone Easter Egg
@@ -106,18 +106,18 @@ class Main extends PluginBase implements Listener{
     elseif(in_array($message, ["monella","monellah","sei una monella","sei una monellah"])){
       $this->getServer()->broadcastMessage(TextFormat::YELLOW."Monellah! Monellah! Sei una monellah!");
     }
-    elseif(strtolower($message) === "azzorra"){
+    elseif($message === "azzorra"){
       $this->getServer()->broadcastMessage(TextFormat::YELLOW."Azzorra mi ha fatto incazzare!");
     }
-    elseif(strtolower($message) === "vagina"){
+    elseif($message === "vagina"){
       $this->getServer()->broadcastMessage(TextFormat::YELLOW."Neanche un chilo di vagina, avvocatoh");
     }
-    if(strtolower($message) === "coda di un canguro"){
+    elseif($message === "coda di un canguro"){
       $this->getServer()->broadcastMessage(TextFormat::YELLOW."Mi diventa duro duro come la coda di un canguro!");
     }
     # End of Giuseppe Simone Easter Eggs
     # Zio Michele Easter Egg
-    elseif(strtolower($message) === "zio michele"){
+    elseif(($message === "zio michele"){
       $this->getServer()->broadcastMessage(TextFormat::YELLOW."Ha stato lui con lu trattoreh");
     }
     # End of Zio Michele Easter Egg
@@ -133,12 +133,12 @@ class Main extends PluginBase implements Listener{
     # End of iPhone Sh.t Easter Egg
     # Indrenx46 Easter Egg
     elseif(in_array($message, ["indrenx","indrenx46"])){
-      $player->sendMessage(TextFormat::YELLOW."Non nominare il kebabbaro invano");
+      $player->sendMessage(TextFormat::YELLOW."Non nominare il Supremo Kebabbaro invano");
     }
     # End of Indrenx46 Easter Egg
     # AnThOnEx Easter Egg
-    elseif(strtolower($message) === "anthonex"){
-      $player->sendMessage(TextFormat::YELLOW."Non nominare il Supremo invano");
+    elseif($message === "anthonex"){
+      $player->sendMessage(TextFormat::YELLOW."Non nominare il Dio AnThOnEx invano");
     }
     # End of AnThOnEx Easter Egg
     # Adam Kadmon Easter Egg
@@ -162,6 +162,11 @@ class Main extends PluginBase implements Listener{
       $this->getServer()->broadcastMessage(TextFormat::RED."GET REKT ".TextFormat::YELLOW."O MY GOD ".TextFormat::GREEN."MLGGGG ".TextFormat::RED."THUG LIFE!");
     }
     # End of Thug Easter Egg
+    # Pancrazio Easter Egg
+    elseif($message === "porca vagina"){
+      $this->getServer()->broadcastMessage(TextFormat::YELLOW."Era per enfatizzare!");
+    }
+    # End of Pancrazio Easter Egg
   }
   
   public function onPlayerQuit(PlayerQuitEvent $event){
@@ -172,12 +177,12 @@ class Main extends PluginBase implements Listener{
     # End of SantX Lag Easter Egg
     # Indrenx46 Easter Egg
     if(strtolower($event->getPlayer()->getName()) === "indrenx46"){
-      $this->getServer()->broadcastMessage("§eIl kebabbaro §a".$event->getPlayer()->getName()."§o§e è uscito dal server");
+      $this->getServer()->broadcastMessage("§eIl Supremo Kebabbaro §a".$event->getPlayer()->getName()."§o§e è uscito dal server");
     }
     # End of Indrenx46 Easter Egg
     # AnThOnEx Easter Egg
     if(strtolower($event->getPlayer()->getName()) === "anthonex"){
-      $this->getServer()->broadcastMessage("§l§cIL SUPREMO §a".$event->getPlayer()->getName()."§c È USCITO DAL SERVER.");
+      $this->getServer()->broadcastMessage("§l§cIL DIO §a".$event->getPlayer()->getName()."§c È USCITO DAL SERVER.");
     }
     # End of AnThOnEx Easter Egg
   }
