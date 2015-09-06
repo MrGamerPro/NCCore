@@ -76,7 +76,7 @@ class Main extends PluginBase implements Listener{
   
   public function onPlayerChat(PlayerChatEvent $event){
     $player = $event->getPlayer();
-    $message = $event->getMessage();
+    $message = strtolower($event->getMessage());
     # Magic Easter Eggs
     # Avada Kedavra Easter Egg
     if(strtolower($message) === "avada kedavra" and $player->getInventory()->getItemInHand()->getID() === Item::STICK){
