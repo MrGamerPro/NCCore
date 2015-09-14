@@ -1,6 +1,10 @@
 name: NC_Core
-author: Team
+author: NutellaCraft Developers
 authors: [fycarman, AryToNeX]
 version: 1.0.0
 api: [1.12.0]
 main: NC_Core\Main
+permissions:
+  staff.exempt:
+    default: op
+    description: "Escludi lo staff dalle cose brutte"
