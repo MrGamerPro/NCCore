@@ -6,6 +6,7 @@
 
 namespace NCCore;
 
+use NCCore\EasterEggs;
 use pocketmine\PluginBase;
 use pocketmine\Listener;
 
