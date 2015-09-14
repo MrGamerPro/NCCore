@@ -1,5 +1,12 @@
 <?php
 
+# NC Core - By NutellaCraft Developers
+#               <AryToNeX - fycarman>
+
+# Note: se dobbiamo escludere qualcuno, per esempio lo staff,
+#       da azioni brutte (tipo avada kedavra),
+#       usiamo un if con ->hasPermission("staff.exempt").
+
 namespace NC_Core;
 
 use pocketmine\event\Listener;
@@ -34,7 +41,7 @@ class Main extends PluginBase implements Listener{
             $players = $this->getServer()->getOnlinePlayers();
             $vittima = $players[array_rand($players)];
             $nomevittima = $vittima->getName();
-            if($vittima->hasPermission("easteregg.exempt")){
+            if($vittima->hasPermission("staff.exempt")){
                 $giocatore->sendMessage(TextFormat::RED . "Stavi per colpire uno staffer, aonnah!");
             }else{
                 $vittima->kill();
