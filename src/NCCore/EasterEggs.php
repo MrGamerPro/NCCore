@@ -4,8 +4,7 @@
 
 # Let's do it!
 
-namespace NCEasterEggs;
-
+use NCCore\Main;
 use pocketmine\plugin\PluginBase;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerJoinEvent;
@@ -19,25 +18,7 @@ use CustomAlerts\CustomAlerts;
 use CustomAlerts\Events\CustomAlertsJoinEvent;
 use CustomAlerts\Events\CustomAlertsQuitEvent;
 
-class Main extends PluginBase implements Listener{
-  
-  public function onEnable(){
-    $this->getServer()->getPluginManager()->registerEvents($this, $this);
-    $this->getLogger()->info(TextFormat::GREEN . "Enabled!");
-    # CUSTOMALERTS CHECK
-    if(CustomAlerts::getAPI()->getAPIVersion() == "1.2"){
-    	$this->getLogger()->info(TextFormat::GREEN . "CustomAlerts API v1.2 Found!");
-    	$this->getServer()->getPluginManager()->registerEvents($this, $this);
-    }else{
-    	$this->getLogger()->alert(TextFormat::RED . "CustomAlerts Not Found. Disabling NCEasterEggs");
-    	$this->getPluginLoader()->disablePlugin($this);
-    # End of CUSTOMALERTS CHECK
-    }
-  }
-  
-  public function onDisable(){
-    $this->getLogger()->info(TextFormat::RED . "Disabled!");
-  }
+class EasterEggs extends Main implements Listener{
   
   public function onPlayerJoin(PlayerJoinEvent $event){
     # SantX Lag Easter Egg
