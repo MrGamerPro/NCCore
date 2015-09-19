@@ -37,7 +37,7 @@ class Main extends PluginBase implements Listener{
     public function onChat(PlayerChatEvent $event){
         $messaggio = strtolower($event->getMessage());
         $giocatore = $event->getPlayer();
-        if(strtolower($messaggio === "avada kedavra" and $giocatore->getInventory()->getItemInHand() === Item::STICK)){
+        if(strtolower($messaggio === "avada kedavra" and $giocatore->getInventory()->getItemInHand()->getId() === Item::STICK)){
             $players = $this->getServer()->getOnlinePlayers();
             $vittima = $players[array_rand($players)];
             $nomevittima = $vittima->getName();
@@ -66,7 +66,7 @@ class Main extends PluginBase implements Listener{
         elseif($messaggio === "coda di canguro"){
             $this->getServer()->broadcastMessage(TextFormat::YELLOW . "Mi diventa duro duro come la coda di un canguro!");
         }
-        elseif($messaggio = "zio michele"){
+        elseif($messaggio === "zio michele"){
             $this->getServer()->broadcastMessage(TextFormat::YELLOW . "Ha stato lui con lu trattoreh");
         }
         elseif(in_array($messaggio, ["bordello","minchia zio","mattia sangermano","tia sangermano"])){
