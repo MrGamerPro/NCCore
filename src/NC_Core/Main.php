@@ -141,8 +141,9 @@ class Main extends PluginBase implements Listener{
         $giocatore = $event->getPlayer();
         $messaggio = $this->getConfig()->get("Messaggio_da_bannato");
         if($giocatore->isBanned()){
-            $event->setKickMessage($messaggio);
+            $event->setKickMessage(TextFormat::GOLD . "- You've been kicked...... Reason: Who knows.");
             $event->setCancelled(true);
+            $event->sendAll("what?");
         }
     }
 }
